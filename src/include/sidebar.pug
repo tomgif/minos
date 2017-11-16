@@ -1,0 +1,23 @@
+.b-sidebar.js-sidebar
+	include include/sprite.svg
+	.b-sidebar__wrapper.wow.slideInRight(data-wow-delay="3s")
+		ul.b-lang-switcher
+			- var langs = [{name: 'ru', src: 'index-ru.html'}, {name: 'en', src: 'index.html'}, {name: 'tr', src: 'index-tr.html'}]
+			each lang in langs
+				- var active = lang.name == page ? 'is-active' : '';
+				li.b-lang-switcher__item(class=active): a(href=lang.src)=lang.name
+		ul.b-navigation.js-navigation
+			- var navs = [{name: 'Restaurant', icon: 'octopus', link: 'about'}, {name: 'Bay Yalikavak', icon: 'marker', link: 'yalikavak'}, {name: 'Contacts', icon: 'contacts', link: 'contacts'}]
+			each nav, i in navs
+				- index = i + 1;
+				- active = index == 1 ? 'is-active' : '';
+				li.b-navigation__item(class=active)
+					a(href='javascript:;', data-index=nav.link)
+						span=nav.name
+						svg.b-icon
+							use.b-icon__border(xlink:href="#icon-border")
+							use.b-icon__border.is-active(xlink:href="#icon-border-active")
+							use.b-icon__item(xlink:href="#icon-" + nav.icon)
+							use.b-icon__item.is-active(xlink:href="#icon-" + nav.icon + "-active")
+	.b-sidebar__footer
+		p Member of Spektr Group

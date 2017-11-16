@@ -1,0 +1,60 @@
+html(lang="tr")
+	- var page = 'tr';
+	//= include/head
+	body.b-page
+		.b-page__wrapper
+			.b-content.js-scroll
+				section#about.b-screen.is-main.js-screen
+					.b-screen__content
+						.b-screen__inner
+							svg.b-main-logo.is-animated
+								use(xlink:href="#icon-logo")
+						.b-tabs.js-tabs.wow.bounceInUp(data-wow-delay="3s")
+							ul.b-tabs-nav
+								li.b-tabs-nav__item About the restaurant
+								li.b-tabs-nav__item Seafood
+								li.b-tabs-nav__item Traditional drinks
+							.clear
+							.b-tabs-content
+								.b-tabs-content__item
+									.b-tabs-content__half
+										p MINOS is our hotel’s remote restaurant and beach club with a wide deck over water and a private cabana. It is located at the bottom of the Gerish hill by the waterfront of Yalikavak and is open all year round. Gusto is a traditional Turkish Raki &amp; Fish restaurant with a fancy twist, serving light lunches for the guests of the beach club during the day and using open kitchen to entice the restaurant guests during dinner.
+									.b-tabs-content__half
+										.b-content-slider.js-slider(data-slick='{"arrows": true, "slidesToShow": 2, "slidesToScroll": 1, "infinite": false}')
+											- var slides = [1, 2, 1, 2];
+											each slide in slides
+												.b-content-slider__item
+													a(href="/img/slider" + slide + ".jpg", data-fancybox="gallery")
+														img(src="/img/slider" + slide + ".jpg", alt="")
+								.b-tabs-content__item
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam voluptates tempora dolore quis soluta molestiae reprehenderit iste quisquam reiciendis rerum perspiciatis maiores quia corporis autem tempore neque fugit est nemo nostrum quaerat, dignissimos eos amet repellendus! Iste, nihil eveniet excepturi tenetur eum atque optio praesentium deleniti quod veritatis? Eius, saepe?
+								.b-tabs-content__item
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel vitae quo numquam optio magnam nostrum veritatis pariatur tempore sed soluta quos, fugiat architecto delectus accusamus omnis quia expedita beatae velit. Fugiat inventore voluptatum a veniam earum, dolorum id fugit. Distinctio quos ipsa debitis quidem beatae tenetur veniam, repudiandae perspiciatis minima!
+				section#yalikavak.b-screen.is-slider.js-screen
+					.b-slider(data-slick='{"arrows": false, "infinite": true}')
+						.b-slider__item(style="background-image: url(/img/waterfall.png)")
+							video.b-lazy(data-src="//media2.zenrus.ru/media/video/waterfall2.mp4", loop="", autoplay="", muted="")
+						.b-slider__item(style="background-image: url(/img/meduza.png)")
+							video.b-lazy(data-src="//media2.zenrus.ru/media/video/meduza.mp4", loop="", autoplay="", muted="")
+						.b-slider__item(data-zoom='[{"x": 60, "y": 30, "src": "/img/screen2.jpg"}, {"x": 0, "y": -27, "src": "/img/screen3.jpg"}, {"x": -60, "y": 30, "src": "/img/screen2.jpg"}, {"x": 0, "y": 67, "src": "/img/screen3.jpg"}]')
+							img.b-lazy.b-slider__image(src="/img/screen3.jpg", alt="")
+					.b-screen__content.js-screen__content
+						.has-grid
+							.b-screen__title Bay <br>Yalikavak
+							.b-screen__text
+								p Yalikavak bay lies in the northwestern part of the peninsula. Several decades ago, it was a simple, small fishing village only 19 km from the center of Bodrum.
+								p Today Yalikavak is one of the fastest growing areas of Bodrum peninsula. Not only does it attract a large number of local residents who enjoy developed infrastructure and higher standard of living but also invesCtors who see the potential of growth of this area.
+								p Undoubtedly, main reason for this development is the presence of the second largest marina in Europe. Palmarina Yalikavak is distinctively designed for mega yachts up to 150 meters in size. Besides state of the art facilities for the yachts and yacht owners, you will also find numerous luxury facilities such as spa &amp; fitness, exclusive boutiques and designer stores, a kids fun water park, a deluxe supermarket and a variety of fine-dine restaurants and classy cafes serving Turkish, European and Asian cuisine. Some of the world-famous restaurant brands are residing here for example Cipriani, Nobu and the Billionaires Club.
+				section#contacts.b-screen.is-map.js-screen
+					#map
+					.b-screen__content
+						.has-grid
+							.b-screen__title Contacts
+							.b-screen__text
+								p: br
+								p Yalıkavak Mahallesi 26. Sokak No:5 / A-B-C-D
+								p YALIKAVAK – BODRUM / MUĞLA, Türkiye
+								p +90 252 385 26 00
+								p info@minos.com
+			//= include/sidebar
+		//= include/footer

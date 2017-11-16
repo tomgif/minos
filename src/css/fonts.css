@@ -1,0 +1,17 @@
+@font-face {
+	font-family: 'AFuturicaItalic';
+	src: url('../fonts/AFuturicaMediumItalic.eot');
+	src: url('../fonts/AFuturicaMediumItalic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/AFuturicaMediumItalic.woff') format('woff'),
+		url('../fonts/AFuturicaMediumItalic.ttf') format('truetype');
+	font-weight: 500;
+	font-style: italic}
+
+@font-face {
+	font-family: 'AFuturicaMedium';
+	src: url('../fonts/AFuturicaMedium.eot');
+	src: url('../fonts/AFuturicaMedium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/AFuturicaMedium.woff') format('woff'),
+		url('../fonts/AFuturicaMedium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal}
